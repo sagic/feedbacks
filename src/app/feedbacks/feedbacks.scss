@@ -1,0 +1,30 @@
+.feedbacks-panel {
+
+  $left-panel-width: 50px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70vw;
+  height: 50vw;
+  border: 0px solid;
+  border-radius: 10px;
+  overflow: auto;
+  padding-left: $left-panel-width;
+  background: $theme-color-4;
+  color: $theme-color-3;
+  .left-pane {
+    background: $theme-color-3;
+    color: $theme-color-4;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0;
+    right: auto;
+    width: $left-panel-width;
+    height: auto;
+    z-index: 1;
+    overflow-x: hidden;
+  }
+}

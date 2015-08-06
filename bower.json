@@ -1,0 +1,23 @@
+{
+  "name": "compit - feedbacks",
+  "version": "0.1.0",
+  "authors": [
+    "sagi chizik <sagi.chizik@gmail.com>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.20",
+    "lodash": "~3.10.1",
+    "react": "~0.13.3",
+    "bootstrap": "~3.3.5",
+    "react-bootstrap": "~0.24.3",
+    "requirejs-plugins": "~1.0.3"
+  }
+}

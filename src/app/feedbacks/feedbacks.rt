@@ -1,0 +1,4 @@
+<div class="feedbacks-panel">
+    <nav class="left-pane">Left</nav>
+    <div class="content-pane">Content</div>
+</div>
