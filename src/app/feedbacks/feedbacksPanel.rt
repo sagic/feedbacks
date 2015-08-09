@@ -1,0 +1,13 @@
+<rt-require dependency="ReactBS" as="ReactBS" />
+<rt-require dependency="./feedbacksList" as="feedbacksList" />
+<rt-require dependency="/app/components/userAvatar" as="userAvatar" />
+
+<div class="feedbacks-panel">
+    <nav class="left-pane">
+        <userAvatar />
+        <ReactBS.Button bsStyle="link"><ReactBS.Glyphicon glyph="envelope" /></ReactBS.Button>
+    </nav>
+    <div class="content-pane">
+        <feedbacksList />
+    </div>
+</div>

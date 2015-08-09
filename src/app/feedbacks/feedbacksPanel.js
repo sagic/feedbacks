@@ -1,4 +1,4 @@
-define(['react', 'lodash', './feedbacks.rt'], function (React, _, template) {
+define(['react', 'lodash', './feedbacksPanel.rt'], function (React, _, template) {
     'use strict';
 
     return React.createClass({
