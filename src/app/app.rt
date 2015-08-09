@@ -1,4 +1,4 @@
-<rt-require dependency="feedbacks/feedbacks" as="feedbacks" />
+<rt-require dependency="feedbacks/feedbacksPanel" as="feedbacksPanel" />
 <div>
-    <feedbacks />
+    <feedbacksPanel />
 </div>
