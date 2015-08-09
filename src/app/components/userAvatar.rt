@@ -1,0 +1,4 @@
+<rt-require dependency="ReactBS" as="ReactBS" />
+<div class="user-avatar">
+    <ReactBS.Glyphicon glyph="user" />
+</div>
