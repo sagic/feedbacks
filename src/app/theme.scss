@@ -1,8 +1,23 @@
-$theme-color-1: #FFF;
-$theme-color-2: #000;
-$theme-color-3: #232F3A;
-$theme-color-4: #92AAAA;
+$theme-color-1: #FFFFFF;
+$theme-color-2: #BF3F3F;
+$theme-color-3: #593325;
+$theme-color-4: #D9D0BF;
+$theme-color-5: #BF846F;
+$theme-color-6: #F25757;
 
 body {
   font-family: 'Open Sans', sans-serif;
+  background: $theme-color-2;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
 }
