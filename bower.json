@@ -18,6 +18,8 @@
     "react": "~0.13.3",
     "bootstrap": "~3.3.5",
     "react-bootstrap": "~0.24.3",
-    "requirejs-plugins": "~1.0.3"
+    "requirejs-plugins": "~1.0.3",
+    "flux": "~2.0.2",
+    "eventemitter3": "~1.1.1"
   }
 }

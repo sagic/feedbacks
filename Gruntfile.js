@@ -43,13 +43,13 @@ module.exports = function (grunt) {
             }
         },
 
-        connect: {
+        express: {
+            options: {
+                args: ['.tmp/public', 2345],
+            },
             dev: {
                 options: {
-                    port: 2345,
-                    //keepalive: true,
-                    base: '.tmp/public',
-                    open: true
+                    script: 'server/server.js'
                 }
             }
         },
@@ -59,15 +59,25 @@ module.exports = function (grunt) {
                 files: ['src/**/*'],
                 tasks: ['watch-handler']
             }
+        },
+
+        concurrent: {
+            target: {
+                tasks: ['express:dev', 'watch'],
+                options: {
+                    logConcurrentOutput: true
+                }
+            }
         }
 
     });
 
+    grunt.loadNpmTasks('grunt-concurrent');
     grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-express-server');
     grunt.loadNpmTasks('grunt-react-templates');
 
     grunt.registerTask('default', ['dist']);
@@ -77,8 +87,7 @@ module.exports = function (grunt) {
     grunt.registerTask('serve', [
         'clean',
         'dist',
-        'connect:dev',
-        'watch'
+        'concurrent'
     ]);
 
 

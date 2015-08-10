@@ -21,3 +21,7 @@ react poc
 # Run&Gun
 * grunt and run the server
 <pre><code>grunt serve</code></pre>
+
+
+# Special Thanks
+* https://randomuser.me/
