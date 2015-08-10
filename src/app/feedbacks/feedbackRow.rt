@@ -1,0 +1,27 @@
+<rt-require dependency="ReactBS" as="ReactBS"/>
+<rt-require dependency="../components/userAvatar" as="userAvatar"/>
+<rt-require dependency="./replyForm" as="replyForm"/>
+<li class="feedback-row" rt-scope="this.getDisplayed() as displayed">
+    <userAvatar rt-props="{user:displayed.user}"/>
+    <div class="content">
+        <div><h3>{displayed.title}</h3></div>
+        <div>{displayed.feedback}</div>
+    </div>
+    <div rt-if="this.state.isOpen" class="replies">
+        <div class="reply-row" rt-repeat="reply in this.props.feedback.replies">
+            <hr />
+            <userAvatar rt-props="{user:reply.user}"/>
+            <div class="reply-content">{reply.message}</div>
+        </div>
+        <replyForm key="replyForm" rt-if="this.state.isReplying"
+                   rt-props="{submitReplyHandler: this.handleSubmitReply}"/>
+    </div>
+    <div class="options">
+        <ReactBS.Button bsStyle="link" onClick="{this.handleDetails}">
+            <ReactBS.Glyphicon glyph="{this.state.isOpen ? 'eye-close' : 'eye-open'}"/>
+        </ReactBS.Button>
+        <ReactBS.Button bsStyle="link" onClick="{this.handleAddReply}">
+            <ReactBS.Glyphicon glyph="envelope"/>
+        </ReactBS.Button>
+    </div>
+</li>

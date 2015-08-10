@@ -1,13 +1,23 @@
-<rt-require dependency="ReactBS" as="ReactBS" />
-<rt-require dependency="./feedbacksList" as="feedbacksList" />
-<rt-require dependency="/app/components/userAvatar" as="userAvatar" />
+<rt-require dependency="ReactBS" as="ReactBS"/>
+<rt-require dependency="./feedbackRow" as="feedbackRow"/>
+<rt-require dependency="./feedbackForm" as="feedbackForm"/>
+<rt-require dependency="../components/userAvatar" as="userAvatar"/>
 
-<div class="feedbacks-panel">
-    <nav class="left-pane">
-        <userAvatar />
-        <ReactBS.Button bsStyle="link"><ReactBS.Glyphicon glyph="envelope" /></ReactBS.Button>
-    </nav>
-    <div class="content-pane">
-        <feedbacksList />
+<div rt-class="{'feedbacks-panel':true, 'show': this.props.isLoggedIn}">
+    <div class="wrapper">
+        <nav class="left-pane">
+            <userAvatar rt-props="{user:this.state.user}"/>
+            <ReactBS.Button bsStyle="link" onClick="{this.handleNewFeedbackClick}">
+                <ReactBS.Glyphicon glyph="envelope"/>
+            </ReactBS.Button>
+        </nav>
+        <div class="content-pane">
+            <ul>
+                <feedbackRow rt-repeat="feedback in this.state.feedbacks" rt-props="{feedback:feedback}"/>
+            </ul>
+        </div>
+        <nav class="right-pane" rt-class="{show:this.state.isCreatingFeedback}">
+            <feedbackForm rt-props="{closeHandler:this.hideForm}"/>
+        </nav>
     </div>
 </div>

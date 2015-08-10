@@ -1,0 +1,12 @@
+.feedback-form {
+  color: $theme-color-4;
+  text-align: left;
+  width: 100%;
+
+  .options {
+    .form-group {
+      display: inline-block;
+      margin-left: 5px;
+    }
+  }
+}

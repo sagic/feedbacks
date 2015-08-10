@@ -10,14 +10,39 @@ body {
   background: $theme-color-2;
 }
 
-@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+@mixin box-shadow($top, $left, $blur, $spread, $color, $inset: false) {
   @if $inset {
-    -webkit-box-shadow:inset $top $left $blur $color;
-    -moz-box-shadow:inset $top $left $blur $color;
-    box-shadow:inset $top $left $blur $color;
+    -webkit-box-shadow: inset $top $left $blur $spread $color;
+    -moz-box-shadow: inset $top $left $blur $spread $color;
+    box-shadow: inset $top $left $blur $spread $color;
   } @else {
-    -webkit-box-shadow: $top $left $blur $color;
-    -moz-box-shadow: $top $left $blur $color;
-    box-shadow: $top $left $blur $color;
+    -webkit-box-shadow: $top $left $blur $spread $color;
+    -moz-box-shadow: $top $left $blur $spread $color;
+    box-shadow: $top $left $blur $spread $color;
+  }
+}
+
+* {
+  transition: all .3s ease-in-out;
+}
+
+button:focus:active {
+  outline: 0;
+}
+
+.btn {
+  &:hover {
+    .glyphicon {
+      color: $theme-color-1;
+    }
+  }
+  &:focus {
+    outline: 0;
+  }
+  &:active {
+    outline: 0;
+  }
+  &:focus:active {
+    outline: 0;
   }
 }

@@ -1,7 +1,16 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,300|Montserrat:700);
 
+
+// TODO: replace with injector
 @import 'theme.scss';
+@import 'app.scss';
+
+@import 'components/userAvatar.scss';
+
 @import 'feedbacks/feedbacksPanel.scss';
-@import 'feedbacks/feedbacksList.scss';
-@import 'feedbacks/feedback.scss';
+@import 'feedbacks/feedbackRow.scss';
+@import 'feedbacks/feedbackForm.scss';
+@import 'feedbacks/replyForm.scss';
+
+
 

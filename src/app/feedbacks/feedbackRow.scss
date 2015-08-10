@@ -1,0 +1,59 @@
+.feedback-row {
+  list-style: none;
+  margin-bottom: 10px;
+
+  > div {
+    //float: left;
+  }
+
+  .user-avatar {
+    .circle {
+      border-color: $theme-color-3;
+    }
+    .name {
+      color: $theme-color-3;
+    }
+  }
+
+  .content {
+    padding-left: 20px;
+    display: inline-block;
+    width: calc(100% - 60px);
+    vertical-align: top;
+  }
+
+  .replies {
+    .reply-row {
+      padding-left: 70px;
+
+      hr {
+        margin: 15px 0 7px 0;
+        border-color: $theme-color-3;
+      }
+
+      .user-avatar {
+        width: 30px;
+        height: 30px;
+        .name {
+          font-size: 8px;
+        }
+      }
+      .reply-content {
+        padding-left: 15px;
+        display: inline-block;
+        width: calc(100% - 60px);
+        vertical-align: top;
+      }
+    }
+  }
+
+  .options {
+    margin: 10px 0;
+    background: rgba(255, 255, 255, .1);
+    text-align: right;
+    .btn {
+      font-size: 25px;
+      color: $theme-color-3;
+    }
+  }
+}

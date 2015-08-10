@@ -1,0 +1,11 @@
+<rt-require dependency="ReactBS" as="ReactBS" />
+<div class="feedback-form container">
+    <form>
+        <ReactBS.Input ref="titleInp" type="text" label="Title" placeholder="Enter title" />
+        <ReactBS.Input ref="feedbackInp" type="textarea" label="Feedback" placeholder="Enter your feedback" />
+        <div class="options pull-right">
+            <ReactBS.ButtonInput type="reset" value="Cancel" onClick="{this.handleFormReset}" />
+            <ReactBS.ButtonInput type="submit" value="Submit" onClick="{this.handleFormSubmit}" />
+        </div>
+    </form>
+</div>

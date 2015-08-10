@@ -1,0 +1,7 @@
+<rt-require dependency="ReactBS" as="ReactBS" />
+<div class="reply-form container">
+    <form>
+        <ReactBS.Input ref="replyInp" type="textarea" placeholder="Message goes here..." />
+        <ReactBS.ButtonInput type="submit" onClick="{this.submit}" />
+    </form>
+</div>

@@ -1,4 +1,9 @@
-<rt-require dependency="feedbacks/feedbacksPanel" as="feedbacksPanel" />
+<rt-require dependency="feedbacks/feedbacksPanel" as="feedbacksPanel"/>
 <div>
-    <feedbacksPanel />
+    <div rt-if="!this.state.isLoggedIn" key="loginAnim" class="login-animation">
+        <span>Authenticating...</span>
+    </div>
+    <div key="panel">
+        <feedbacksPanel rt-props="{isLoggedIn:this.state.isLoggedIn}"/>
+    </div>
 </div>

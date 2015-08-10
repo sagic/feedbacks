@@ -6,13 +6,16 @@ require.config({
         lodash: '../vendor/lodash/lodash',
         jquery: '../vendor/jquery/dist/jquery',
         reactBootstrap: '../vendor/react-bootstrap/react-bootstrap',
-        react: '../vendor/react/react'
+        react: '../vendor/react/react',
+        flux: '../vendor/flux/dist/Flux',
+        eventEmitter: '../vendor/eventemitter3/index'
     },
     shim: {
         lodash: {exports: '_'},
         jquery: {exports: '$'},
         react: {exports: 'React'},
-        reactBootstrap: {exports: 'ReactBS'}
+        reactBootstrap: {exports: 'ReactBS'},
+        eventEmitter: {exports: 'EventEmitter'}
     },
     map: {
         '*': {

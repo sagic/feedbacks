@@ -1,4 +1,7 @@
 <rt-require dependency="ReactBS" as="ReactBS" />
 <div class="user-avatar">
-    <ReactBS.Glyphicon glyph="user" />
+    <div class="avatar circle">
+        <img src="{this.getImageURL()}" />
+    </div>
+    <div class="name">{this.getName()}</div>
 </div>
