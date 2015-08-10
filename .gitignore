@@ -1,7 +1,7 @@
 .idea
 .DS_Store
 node_modules
-src/vendor
+/src/vendor
 .sass-cache
 .tmp
 **/*.rt.js
